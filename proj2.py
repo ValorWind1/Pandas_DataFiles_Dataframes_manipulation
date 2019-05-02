@@ -1,34 +1,3 @@
-# import csv
-#
-# with open('schedule.csv', 'r') as csvFile:
-#     reader = csv.reader(csvFile)
-#     for row in reader:
-#         print(row)
-#
-# csvFile.close()
-
-
-# def permutations(list,start,end):
-#     if (start == end):
-#         print(list)
-#     else:
-#         for i in range (start,end + 1):
-#             list[start], list[i] = list[i], list[start]  # The swapping
-#             permutations(list, start + 1, end)
-#             list[start], list[i] = list[i], list[start]  # Backtracking
-#
-# permutations([1, 2, 3], 0, 2)
-"""
-
-If we have reached the destination point
-        return an array containing only the position of the destination
-else
-       a,move in the forwards direction and check if this leads to a solution
-       b,if  option a does not work, then move down
-      c, if either work, add the current position to the solution obtained at either a or b
-
-"""
-# (rt in mz )
 def solvelist( list , position , N ):   # so we will first check the instructores and all their signed up classes.
     # give us the list of all the positions that we have explored
     # N a block cell
@@ -59,18 +28,9 @@ list = [[ 1 ,   0 ,      1,      0 ,       0],
         [ 0 ,   1 ,      0,      0 ,       0],
         [ 1 ,   1 ,      1,      1 ,       1]
         ]
-
+for i in [i for i,x in enumerate(list) if x == 0]:
+    print(i)
 # it will give me whenever there's a 1 , its position.
 
 print (solvelist(list,(0,0),5))
 
-"""
-then check if an instructor has taken more than 2 courses. 
-
-"""
-
-
-"""
-then check if every course has at least 1 instructor 
-
-"""
