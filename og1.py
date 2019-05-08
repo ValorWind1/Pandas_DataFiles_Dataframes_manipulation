@@ -32,8 +32,8 @@ secondbestscore_teachers["Assigned Classes"] = 1
 secondbestscore_teachers["Total_number_classes_given"] = secondbestscore_teachers.iloc[:,2:28].sum(axis=1)
 
 secondbestscore_teachers.loc[secondbestscore_teachers["Total_number_classes_given"] > 4,["Assigned Classes"]] = "Number of Classes Assigned"
-#print(secondbestscore_teachers)
-#secondbestscore_teachers.to_csv("secondS.csv",index=False)
+print(secondbestscore_teachers)
+secondbestscore_teachers.to_csv("secondS.csv",index=False)
 
 
 """
@@ -45,10 +45,10 @@ Joining the 2 Data frames , and checks for duplicate keys
 result = pd.merge(Highestscore_teachers,secondbestscore_teachers,how="outer",validate="many_to_many")
 result.to_csv("merge.csv",index=False)
 print(result)
-# df = pd.read_csv("merge.csv")
+df = pd.read_csv("merge.csv")
 
 """
-This will get back location/ classes with "number of classes assigned" , so we get back if we want all classes 
+This will get back location/ classes with "number of classes assigned" , so we get back if we want the indexes
 """
 # import numpy as np
 # #
