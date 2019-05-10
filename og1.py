@@ -22,7 +22,7 @@ Highestscore_teachers.to_csv("highestS.csv",index=False)
 26 classes - so far 17 
 that's why we have chosen to give teachers with the highest the 2 highest evaluation scores(5,4) so we can cover all 26 classes.
 assuming they have unique positions(classes), we will see. 
- 
+ .
 """
 
 secondbestscore_teachers["Assigned Classes"] = 1
@@ -46,13 +46,6 @@ result = pd.merge(Highestscore_teachers,secondbestscore_teachers,how="outer",val
 result.to_csv("merge.csv",index=False)
 print(result)
 df = pd.read_csv("merge.csv")
-
-"""
-This will get back location/ classes with "number of classes assigned" , so we get back if we want the indexes
-"""
-# import numpy as np
-# #
-# # print(np.where(df.index=="Number of Classes Assigned")[0])
 
 """
 extra credit - reassign courses 
